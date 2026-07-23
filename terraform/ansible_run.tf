@@ -5,4 +5,7 @@ resource "null_resource" "ansible" {
   provisioner "local-exec" {
     command = "cd ../ansible && ansible-playbook -i inventory.ini playbook.yml"
   }
+  triggers = {
+    vm_ip = yandex_compute_instance.web.network_interface[0].nat_ip_address
+  }
 }
