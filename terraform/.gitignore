@@ -1,0 +1,4 @@
+authorized_key.json
+terraform.tfstate
+terraform.tfstate.*
+.terraform/

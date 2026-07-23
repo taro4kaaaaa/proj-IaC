@@ -1,0 +1,10 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for roles/app
+app_name: happy-b
+app_port: 8080
+db_host: postgres
+directories:
+  - /opt/app
+  - /opt/logs
+  - /opt/backups

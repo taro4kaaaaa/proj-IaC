@@ -1,0 +1,7 @@
+---
+- hosts: web 
+  become: true # с правами root
+
+  roles:
+    - app
+    - nginx
