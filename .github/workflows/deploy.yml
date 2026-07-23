@@ -26,6 +26,10 @@ jobs:
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
 
+      - name: Create Yandex SA key
+        run: |
+          echo '${{ secrets.YC_SERVICE_ACCOUNT_KEY }}' > authorized_key.json
+
       - name: Terraform Init
         run: terraform init
 
